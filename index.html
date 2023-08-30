@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPHONE</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="bg-[#0D6EFD0D] h-[]">
+        <nav class="container pt-10 mx-auto flex justify-between">
+            <h1 class="text-xl font-bold">Hot Gadgets</h1>
+            <button class="btn btn-info">sign up</button>
+        </nav>
+        <section class="banner-text mx-auto w-[700px] text-center space-y-6 mt-8">
+            <h1 class="text-5xl font-bold">Apple Iphone 13 Pro Max</h1>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                in some form, by injected humou.</p>
+            <button class="btn btn-info">sign up</button>
+        </section>
+    </header>
+    <main>
+        <div class="search mx-auto space-y-8 mt-7 text-center w-[400px]">
+            <h1 class="text-4xl font-bold">Search Your Phone</h1>
+            <div class="search_button flex "><input id="search_field" type="text" placeholder="Type here"
+                    class="input input-bordered w-full max-w-xs" />
+                <button onclick="search()" class="btn btn-info">Search</button>
+            </div>
+        </div>
+        <section id="Phone-container" class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+
+        </section>
+    </main>
+    <script src="api.js"></script>
+</body>
+
+</html>
