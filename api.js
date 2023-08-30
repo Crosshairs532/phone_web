@@ -49,7 +49,7 @@ const show_phones = (phones, bool) => {
             <h2 class="card-title">${phone.phone_name}</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
             <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
+            <button class="btn btn-primary" onclick= buy_now('${phone.slug}')>Buy Now</button>
         </div>`;
         phone_container.appendChild(create_div_card);
 
@@ -69,4 +69,40 @@ const load_spinner = (isloading) => {
         loading.classList.add('hidden');
     }
 }
-//minimizing all value
+// buy now
+
+const buy_now = async (id) => {
+    const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
+    const data = await res.json();
+    show_details(data.data)
+    // my_modal_2.showModal();
+    // buy_now
+
+}
+// show deatils
+const show_details = (phone) => {
+
+    const details_container = document.getElementById('details');
+
+    details_container.innerHTML = `
+    <dialog id="my_modal_2" class="modal ">
+
+        <form method="dialog" class="modal-box space-y-3">
+            <img class="mx-auto" src="${phone.image}" alt="">
+            <h3 class="font-bold text-lg">${phone.name}</h3>
+            <p><span class= "font-bold">Storage: </span>${phone.mainFeatures.storage}</p>
+            <p><span class= "font-bold">Display Size:</span> ${phone.mainFeatures.displaySize}</p>
+            <p><span class= "font-bold">chipset:</span> ${phone.mainFeatures.chipSet}</p>
+            <p><span class= "font-bold">Memory: </span>${phone.mainFeatures.memory}</p>
+            <p><span class= "font-bold">GPS:</span> ${phone.others?.gps || 'not available'}</p>
+            <p><span class= "font-bold">Secsors:</span> ${phone.mainFeatures.sensors}</p>
+            <p class="py-4"></p>
+        </form>
+        <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+        </form>
+    </dialog>
+`
+    my_modal_2.showModal();
+
+}

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="bg-[#0D6EFD0D] h-[]">
+    <header class="bg-[#0D6EFD0D] h-[100vh]">
         <nav class="container pt-10 mx-auto flex justify-between">
             <h1 class="text-xl font-bold">Hot Gadgets</h1>
             <button class="btn btn-info">sign up</button>
@@ -21,9 +21,24 @@
                 in some form, by injected humou.</p>
             <button class="btn btn-info">sign up</button>
         </section>
+        <section class="container relative top-[100px] w-[800px] flex mx-auto">
+            <div class="">
+                <img class="m-0 w-1/2 mix-blend-multiply"
+                    src="https://w7.pngwing.com/pngs/450/269/png-transparent-space-gray-iphone-x-showing-ios-and-iphone-4-iphone-8-plus-iphone-5-iphone-x-iphone-apple-gadget-electronics-mobile-phone-thumbnail.png"
+                    alt="">
+            </div>
+            <div class=""><img class=" m-0 w-9/12 mix-blend-multiply"
+                    src="
+                    https://w7.pngwing.com/pngs/450/269/png-transparent-space-gray-iphone-x-showing-ios-and-iphone-4-iphone-8-plus-iphone-5-iphone-x-iphone-apple-gadget-electronics-mobile-phone-thumbnail.png"
+                    alt=""></div>
+            <div class=""><img class="m-0 w-1/2 mix-blend-multiply"
+                    src="
+                    https://w7.pngwing.com/pngs/450/269/png-transparent-space-gray-iphone-x-showing-ios-and-iphone-4-iphone-8-plus-iphone-5-iphone-x-iphone-apple-gadget-electronics-mobile-phone-thumbnail.png"
+                    alt=""></div>
+        </section>
     </header>
-    <main>
-        <div class="search mx-auto space-y-8 mt-7 text-center w-[400px]">
+    <main class="">
+        <div class="search mx-auto space-y-8 mt-[100px] text-center w-[400px]">
             <h1 class="text-4xl font-bold">Search Your Phone</h1>
             <div class="search_button flex "><input id="search_field" type="text" placeholder="Type here"
                     class="input input-bordered w-full max-w-xs" />
@@ -33,11 +48,49 @@
         <section id="loading" class="loading-bar w-11 mt-12  mx-auto hidden">
             <span class="loading loading-spinner loading-lg"></span>
         </section>
-        <section id="Phone-container" class="grid gap-8 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+        <section id="details" class="">
+
+        </section>
+        <section id="Phone-container" class="grid mt-11 gap-8 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
 
         </section>
         <section id="show_all" onclick="show()" class="hidden"><button class="btn btn-info">Show All</button></section>
     </main>
+    <section class=" bg-[#0D6EFD0D] text-blue-600">
+        <div class="pt-16 container mx-auto flex justify-between">
+            <div>
+                <h1 class="text-4xl font-bold">Hot Gadgets</h1>
+                <p>You can definitely work.</p>
+            </div>
+
+            <button class="btn btn-info">Join Premium</button>
+        </div>
+        <hr class="bg-slate-400  w-[90%] mx-auto my-[50px]">
+        <footer class="footer p-10 ">
+
+            <div>
+                <span class="footer-title">Services</span>
+                <a class="link link-hover">Branding</a>
+                <a class="link link-hover">Design</a>
+                <a class="link link-hover">Marketing</a>
+                <a class="link link-hover">Advertisement</a>
+            </div>
+            <div>
+                <span class="footer-title">Company</span>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Contact</a>
+                <a class="link link-hover">Jobs</a>
+                <a class="link link-hover">Press kit</a>
+            </div>
+            <div>
+                <span class="footer-title">Legal</span>
+                <a class="link link-hover">Terms of use</a>
+                <a class="link link-hover">Privacy policy</a>
+                <a class="link link-hover">Cookie policy</a>
+            </div>
+        </footer>
+    </section>
+
     <script src="api.js"></script>
 </body>
 
