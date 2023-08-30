@@ -1,6 +1,7 @@
 
 // searching
 const search = () => {
+    load_spinner(true);
     const search_text = document.getElementById('search_field').value;
     load_value(search_text);
 
@@ -35,7 +36,19 @@ const show_phones = (phones) => {
         </div>`;
         phone_container.appendChild(create_div_card);
 
-    });
-}
 
+    });
+    load_spinner(false);
+
+}
+// load_spinner
+const load_spinner = (isloading) => {
+    const loading = document.getElementById('loading');
+    if (isloading) {
+        loading.classList.remove('hidden');
+    }
+    else {
+        loading.classList.add('hidden');
+    }
+}
 //minimizing all value
